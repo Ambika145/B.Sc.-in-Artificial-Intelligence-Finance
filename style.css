@@ -971,6 +971,40 @@ section {
   white-space: normal;
 }
 
+.scholarship-bar {
+  background: linear-gradient(90deg, #1a237e 0%, #4527a0 32%, #7b1fa2 62%, #00acc1 100%);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.scholarship-bar-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.scholarship-bar-text {
+  margin: 0;
+  padding: 0.85rem 1.25rem;
+  text-align: center;
+  color: #fff;
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 767px) {
+  .scholarship-bar-text {
+    padding: 0.75rem 1rem;
+    font-size: 0.88rem;
+  }
+}
+
 /* Wider desktop: widen gutters only. Hero layout is content-driven (no 100svh,
    vh gaps, or transform offsets) so 100%/125%/150% Windows scaling keeps the
    same proportional alignment inside the 1320px hero container. */
