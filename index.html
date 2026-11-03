@@ -32,17 +32,8 @@
     <meta http-equiv="Expires" content="0">
     <title>B.Sc. in Artificial Intelligence & Finance - O.P. Jindal Global University</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://jguonline.edu.in/public/frontend/assets/img/favicon.ico">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    
-        <link rel="stylesheet" href="style.css?v=202608121630">
-        <link rel="stylesheet" href="responsive.css?v=202607311430">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css?v=202610281300">
 
     <!-- Critical: hero layout; enquiry form scrolls inside card only -->
     <style>
@@ -58,7 +49,7 @@
       .hero-info-bar {
         background: linear-gradient(90deg, #1a237e 0%, #4527a0 32%, #7b1fa2 62%, #00acc1 100%) !important;
         position: relative !important;
-        z-index: 5 !important;
+        z-index: 2 !important;
         flex: none !important;
         flex-shrink: 0 !important;
         display: block !important;
@@ -66,6 +57,32 @@
         opacity: 1 !important;
         width: 100% !important;
         max-width: 100% !important;
+      }
+
+      .hero-bottom-bars {
+        position: relative !important;
+        z-index: 2 !important;
+      }
+
+      .hero-section .hero-container {
+        position: relative !important;
+        z-index: 3 !important;
+      }
+
+      .hero-scholarship-bar {
+        background: #3f2a8c !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        padding: 0.55rem 1rem !important;
+      }
+
+      .hero-scholarship-text {
+        margin: 0 !important;
+        color: #fff !important;
+        font-size: clamp(0.78rem, 2.8vw, 0.95rem) !important;
+        font-weight: 600 !important;
+        line-height: 1.4 !important;
       }
 
       .features-section {
@@ -95,6 +112,7 @@
         visibility: visible !important;
         opacity: 1 !important;
         margin-top: 1.25rem !important;
+        margin-bottom: 0.75rem !important;
         padding: 0.9rem 2.85rem !important;
         background-color: #ffffff !important;
         background-image:
@@ -113,13 +131,16 @@
         box-shadow: 0 6px 18px rgba(74, 20, 140, 0.16) !important;
         flex-shrink: 0 !important;
         position: relative !important;
-        z-index: 8 !important;
+        z-index: 12 !important;
         align-self: flex-start !important;
         cursor: pointer !important;
       }
 
       .hero-section .hero-title {
         font-size: clamp(2rem, 3.4vw, 2.85rem) !important;
+        line-height: 1.2 !important;
+        overflow: visible !important;
+        padding-top: 0.12em !important;
       }
 
       .hero-section .hero-subtitle {
@@ -162,7 +183,10 @@
         .hero-section {
           min-height: auto !important;
           max-height: none !important;
-          overflow: visible !important;
+          overflow-x: clip !important;
+          overflow-y: visible !important;
+          width: 100% !important;
+          max-width: 100% !important;
         }
 
         .hero-section .header-logo-jgu,
@@ -240,8 +264,8 @@
         }
 
         .hero-section .header-logo-jgu {
-          height: clamp(4.6rem, 14vh, 9rem) !important;
-          max-height: clamp(4.6rem, 14vh, 9rem) !important;
+          height: clamp(4.2rem, 9.5vh, 6rem) !important;
+          max-height: clamp(4.2rem, 9.5vh, 6rem) !important;
           width: auto !important;
         }
 
@@ -251,7 +275,7 @@
           width: auto !important;
         }
 
-        .hero-main {
+        .hero-section .hero-main {
           flex: 1 1 auto !important;
           min-height: 0 !important;
           max-height: 100% !important;
@@ -259,18 +283,36 @@
           align-items: end !important;
           padding-bottom: 0 !important;
           margin-bottom: 0 !important;
+          box-sizing: border-box !important;
         }
 
         .hero-left {
-          overflow: hidden !important;
+          overflow: visible !important;
           align-self: center !important;
           justify-content: center !important;
           min-height: 0 !important;
+          margin-top: 0 !important;
+          padding-top: 0.35rem !important;
+          padding-bottom: 0.35rem !important;
+          max-height: 100% !important;
+          box-sizing: border-box !important;
+          position: relative !important;
+          z-index: 4 !important;
+        }
+
+        .hero-left .btn-apply-now,
+        .hero-section .btn-apply-now {
+          margin-bottom: 1rem !important;
+          z-index: 12 !important;
+          position: relative !important;
         }
 
         .hero-section .hero-title {
-          font-size: clamp(2rem, 6.6vh, 3.9rem) !important;
-          line-height: 1.12 !important;
+          font-size: clamp(1.6rem, 0.4rem + 2.1vw, 3.15rem) !important;
+          line-height: 1.22 !important;
+          overflow: visible !important;
+          padding-top: 0.32em !important;
+          margin-top: 0 !important;
         }
 
         .hero-section .hero-title-rule {
@@ -278,13 +320,13 @@
         }
 
         .hero-section .hero-subtitle {
-          font-size: clamp(1rem, 2.9vh, 1.65rem) !important;
+          font-size: clamp(0.8rem, 0.3rem + 0.95vw, 1.65rem) !important;
           margin-top: clamp(0.75rem, 2.4vh, 1.55rem) !important;
           line-height: 1.4 !important;
         }
 
         .hero-section .hero-description {
-          font-size: clamp(0.98rem, 2.45vh, 1.45rem) !important;
+          font-size: clamp(0.8rem, 0.3rem + 0.85vw, 1.45rem) !important;
           margin-top: clamp(0.6rem, 1.9vh, 1.25rem) !important;
           line-height: 1.55 !important;
         }
@@ -292,7 +334,7 @@
         .hero-section .btn-apply-now {
           margin-top: clamp(0.85rem, 2.6vh, 1.8rem) !important;
           padding: clamp(0.75rem, 2vh, 1.25rem) clamp(2.4rem, 4.1vh, 3.75rem) !important;
-          font-size: clamp(1rem, 2.35vh, 1.4rem) !important;
+          font-size: clamp(0.85rem, 0.35rem + 0.6vw, 1.4rem) !important;
         }
 
         .hero-info-bar {
@@ -336,7 +378,7 @@
         }
 
         .hero-student-img {
-          max-height: min(100%, var(--hero-img-max)) !important;
+          max-height: 100% !important;
           max-width: 100% !important;
           width: auto !important;
           height: auto !important;
@@ -390,6 +432,75 @@
         }
       }
 
+      /* Laptop / short-viewport (<=800px tall, >=992px wide): slightly tighter
+         left column so title + Apply button always sit above the info bar. */
+      @media screen and (min-width: 992px) and (max-height: 800px) {
+        .hero-section {
+          --hero-form-bar-gap: clamp(0.5rem, 1.8vh, 1.25rem) !important;
+        }
+
+        .hero-section .hero-container {
+          padding-top: clamp(0.3rem, 1vh, 0.6rem) !important;
+        }
+
+        .hero-section .hero-header {
+          padding-bottom: 0.15rem !important;
+        }
+
+        .hero-section .header-logo-jgu {
+          height: clamp(3.2rem, 8vh, 4.4rem) !important;
+          max-height: clamp(3.2rem, 8vh, 4.4rem) !important;
+        }
+
+        .hero-section .header-logo-jsbf {
+          height: clamp(3.6rem, 11vh, 5.2rem) !important;
+          max-height: clamp(3.6rem, 11vh, 5.2rem) !important;
+        }
+
+        .hero-left {
+          padding-top: 0.15rem !important;
+          padding-bottom: 0.15rem !important;
+        }
+
+        .hero-section .hero-title {
+          font-size: clamp(1.4rem, 0.3rem + 1.8vw, 2.5rem) !important;
+          line-height: 1.18 !important;
+          padding-top: 0.1em !important;
+        }
+
+        .hero-section .hero-title-rule {
+          margin-top: clamp(0.3rem, 1vh, 0.6rem) !important;
+        }
+
+        .hero-section .hero-subtitle {
+          font-size: clamp(0.78rem, 0.25rem + 0.8vw, 1.15rem) !important;
+          margin-top: clamp(0.4rem, 1.4vh, 0.85rem) !important;
+          line-height: 1.32 !important;
+        }
+
+        .hero-section .hero-description {
+          font-size: clamp(0.78rem, 0.25rem + 0.75vw, 1.05rem) !important;
+          margin-top: clamp(0.3rem, 1vh, 0.6rem) !important;
+          line-height: 1.4 !important;
+        }
+
+        .hero-left .btn-apply-now,
+        .hero-section .btn-apply-now {
+          margin-top: clamp(0.5rem, 1.6vh, 0.95rem) !important;
+          margin-bottom: 0.3rem !important;
+          padding: clamp(0.5rem, 1.4vh, 0.8rem) clamp(1.8rem, 3vh, 2.6rem) !important;
+          font-size: clamp(0.8rem, 0.3rem + 0.55vw, 1rem) !important;
+        }
+
+        .hero-info-bar {
+          padding: clamp(0.55rem, 1.6vh, 1rem) 0 !important;
+        }
+
+        .hero-section .hero-info-item {
+          font-size: clamp(0.85rem, 0.3rem + 0.7vw, 1.15rem) !important;
+        }
+      }
+
       /* 150% Windows scaling only (very short viewport ≈627px). 100% (~940px) and
          125% (~752px) are ABOVE this breakpoint and stay exactly as they are.
          Here we scale the hero down just enough that the whole left column
@@ -419,7 +530,9 @@
 
         .hero-section .hero-title {
           font-size: clamp(1.35rem, 4.5vh, 2rem) !important;
-          line-height: 1.08 !important;
+          line-height: 1.2 !important;
+          overflow: visible !important;
+          padding-top: 0.12em !important;
         }
 
         .hero-section .hero-title-rule {
@@ -487,6 +600,7 @@
           min-height: 32rem !important;
         }
       }
+
     </style>
 </head>
 <body>
@@ -510,8 +624,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h1 class="hero-title">
           <span class="hero-title-line hero-title-base">B.Sc. in</span>
           <span class="hero-title-gradient">
-            <span class="hero-title-line">Artificial Intelligence &amp;</span>
-            <span class="hero-title-line">Finance</span>
+            <span class="hero-title-line">Artificial Intelligence</span>
+            <span class="hero-title-line">&amp; Finance</span>
           </span>
         </h1>
         <div class="hero-title-rule" aria-hidden="true"></div>
@@ -541,34 +655,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <div class="hero-info-bar">
-    <div class="hero-info-inner">
-      <div class="hero-info-item">
-        <strong>Undergraduate Degree</strong>
-      </div>
-      <div class="hero-info-item">
-        <strong>Duration: 3 Years</strong>
-      </div>
-      <div class="hero-info-item">
-        <strong>Batch Starts: March 2027</strong>
-      </div>
-      <div class="hero-info-item">
-        <strong>Fully Online Programme</strong>
-      </div>
-      <div class="hero-info-item">
-        <strong>Programme Fee: ₹2,20,000</strong>
-      </div>
-      <div class="hero-info-item">
-        <strong>Easy EMI Option Available</strong>
+  <div class="hero-bottom-bars">
+    <div class="hero-info-bar">
+      <div class="hero-info-inner">
+        <div class="hero-info-item">
+          <strong>Undergraduate Degree</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Duration: 3 Years</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Batch Starts: March 2027</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Fully Online Programme</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Programme Fee: ₹2,20,000</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Easy EMI Option Available</strong>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="scholarship-bar" aria-label="Scholarship information">
-  <div class="scholarship-bar-line" aria-hidden="true"></div>
-  <p class="scholarship-bar-text">Merit-Based Scholarships Available for Eligible Candidates</p>
-</section>
+<div class="hero-scholarship-bar">
+  <p class="hero-scholarship-text">Merit-Based Scholarships Available for Eligible Candidates</p>
+</div>
 
     <section class="features-section section-global">
         <div class="container features-container">
@@ -637,7 +752,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="programme-overview-inner">
       <div class="programme-overview-content">
         <h2 class="programme-overview-heading">Programme Overview</h2>
-        <div class="programme-overview-texts">
+        <div class="programme-overview-copy">
           <p class="programme-overview-text">
             The <strong>B.Sc. in Finance &amp; Entrepreneurship (Online)</strong> is a 3-year undergraduate programme by O.P. Jindal Global University, designed to build strong financial foundations and entrepreneurial skills for today's evolving business landscape.
           </p>
@@ -780,18 +895,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="know-more-section section-global">
   <div class="container know-more-container">
     <div class="know-more-inner">
+      <div class="know-more-media">
+        <img src="assets/know-more-brochure.png?v=2" alt="AI and finance illustration with robotic hand and financial growth" class="know-more-img">
+      </div>
       <div class="know-more-content">
         <h3 class="know-more-title">Need to know more?</h3>
         <p class="know-more-lead">Explore the complete programme details</p>
         <p class="know-more-text">
           Download the brochure or visit the website to view the detailed curriculum, course structure, credits, learning outcomes, and faculty profiles.
         </p>
-        <a href="#" class="btn know-more-cta fw-bold npfWidgetButton npfWidget-86a9cceff1e5a85bf6f787455b7997df">DOWNLOAD BROCHURE</a>
+        <a href="#" class="btn know-more-cta font-weight-bold npfWidgetButton npfWidget-86a9cceff1e5a85bf6f787455b7997df">DOWNLOAD BROCHURE</a>
       </div>
-      <div class="know-more-media">
-        <img src="assets/know-more-brochure.png?v=2" alt="AI and finance illustration with robotic hand and financial growth" class="know-more-img">
       </div>
-    </div>
   </div>
 </section>
 
@@ -1181,24 +1296,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <img class="recognition-bg" src="assets/recog-campus-bg.png" alt="" aria-hidden="true">
   <div class="recognition-container">
     <h2 class="recognition-title">Recognitions and Accreditations</h2>
-
-    <div class="recognition-grid" id="recognitionSlider">
+    <div class="recognition-grid" id="recognitionGrid">
       <div class="rec-card rec-card-small">
         <img src="assets/recog-1-qs-top150.png" alt="TOP 150 Under 50 Globally - QS Young University Rankings 2022">
       </div>
-
       <div class="rec-card rec-card-small">
         <img src="assets/recog-2-eminence.png" alt="Institution of Eminence - Ministry of Education, Government of India">
       </div>
-
       <div class="rec-card rec-card-main">
         <img src="assets/recog-3-global-rankings.png" alt="JGU Makes History in Global Rankings - QS World University Rankings by Subject">
       </div>
-
       <div class="rec-card rec-card-small">
         <img src="assets/recog-4-qs-no1.png" alt="Ranked No. 1 Private University in India - QS World University Rankings (2021 - 2023)">
       </div>
-
       <div class="rec-card rec-card-small">
         <img src="assets/recog-5-online-learning.png" alt="Ranked No. 1 Globally for Online Learning - THE 2024">
       </div>
@@ -1217,11 +1327,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="accordion faq-accordion" id="faqLeft">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faq1">
                   What is the duration of the programme?
                 </button>
               </h2>
-              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqLeft">
+              <div id="faq1" class="collapse show" data-parent="#faqLeft">
                 <div class="accordion-body">
                   The programme is a 3-year undergraduate degree.
                 </div>
@@ -1230,11 +1340,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faq2">
                   Is the programme fully online?
                 </button>
               </h2>
-              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+              <div id="faq2" class="collapse" data-parent="#faqLeft">
                 <div class="accordion-body">
                   Yes, it is delivered in a 100% online format.
                 </div>
@@ -1243,11 +1353,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faq3">
                   What skills will I gain?
                 </button>
               </h2>
-              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+              <div id="faq3" class="collapse" data-parent="#faqLeft">
                 <div class="accordion-body">
                   You will develop skills in AI, finance, data analytics, and problem-solving.
                 </div>
@@ -1260,11 +1370,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="accordion faq-accordion" id="faqRight">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faq4">
                   What career options are available?
                 </button>
               </h2>
-              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+              <div id="faq4" class="collapse" data-parent="#faqRight">
                 <div class="accordion-body">
                   Careers across fintech, finance, analytics, and technology-driven roles.
                 </div>
@@ -1273,11 +1383,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faq5">
                   What tools will I work with?
                 </button>
               </h2>
-              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+              <div id="faq5" class="collapse" data-parent="#faqRight">
                 <div class="accordion-body">
                   You will work with tools like Python, data visualisation platforms, and AI systems.
                 </div>
@@ -1294,7 +1404,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="enquire-card">
       <div class="enquire-form-panel">
         <div class="enquire-npf-scroll">
-          <div class="npf_wgts enquire-npf-widget" data-height="520px" data-w="86a9cceff1e5a85bf6f787455b7997df"></div>
+          <div class="npf_wgts" data-height="400px" data-w="86a9cceff1e5a85bf6f787455b7997df"></div>
         </div>
       </div>
       <div class="enquire-info-panel">
@@ -1306,467 +1416,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    
-    
-
-    
-    
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const track = document.getElementById('facultyTrack');
-  const prevBtn = document.querySelector('.faculty-arrow.prev');
-  const nextBtn = document.querySelector('.faculty-arrow.next');
-
-  if (!track || !prevBtn || !nextBtn) return;
-
-  function getScrollAmount() {
-    const member = track.querySelector('.faculty-member');
-    if (!member) return 256;
-    const styles = getComputedStyle(track);
-    const gap = parseFloat(styles.columnGap || styles.gap) || 24;
-    return member.offsetWidth + gap;
-  }
-
-  function updateFacultyArrows() {
-    const maxScroll = track.scrollWidth - track.clientWidth;
-    prevBtn.disabled = track.scrollLeft <= 4;
-    nextBtn.disabled = track.scrollLeft >= maxScroll - 4 || maxScroll <= 0;
-  }
-
-  function scrollFaculty(direction) {
-    track.scrollBy({ left: direction * getScrollAmount(), behavior: 'smooth' });
-  }
-
-  prevBtn.addEventListener('click', function () {
-    scrollFaculty(-1);
-  });
-
-  nextBtn.addEventListener('click', function () {
-    scrollFaculty(1);
-  });
-
-  track.addEventListener('scroll', updateFacultyArrows, { passive: true });
-  window.addEventListener('resize', function () {
-    track.scrollTo({ left: Math.round(track.scrollLeft / getScrollAmount()) * getScrollAmount() });
-    updateFacultyArrows();
-  });
-  window.addEventListener('load', updateFacultyArrows);
-  updateFacultyArrows();
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const viewport = document.getElementById('recognitionSlider');
-  const dotsContainer = document.getElementById('recognitionDots');
-  if (!viewport || !dotsContainer) return;
-
-  const cards = Array.from(viewport.querySelectorAll('.rec-card'));
-  let currentIndex = 0;
-
-  function isMobileRecognition() {
-    return window.matchMedia('(max-width: 767px)').matches;
-  }
-
-  function buildDots() {
-    dotsContainer.innerHTML = '';
-    if (!isMobileRecognition() || cards.length <= 1) {
-      dotsContainer.hidden = true;
-      return;
-    }
-    dotsContainer.hidden = false;
-    cards.forEach(function (_card, i) {
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'recognition-dot' + (i === currentIndex ? ' active' : '');
-      btn.setAttribute('aria-label', 'Recognition ' + (i + 1));
-      btn.setAttribute('data-index', String(i));
-      btn.addEventListener('click', function () {
-        goTo(parseInt(this.getAttribute('data-index'), 10));
-      });
-      dotsContainer.appendChild(btn);
-    });
-  }
-
-  function updateDots() {
-    dotsContainer.querySelectorAll('.recognition-dot').forEach(function (dot, i) {
-      dot.classList.toggle('active', i === currentIndex);
-    });
-  }
-
-  function goTo(index) {
-    if (!cards.length) return;
-    currentIndex = Math.max(0, Math.min(index, cards.length - 1));
-    var target = cards[currentIndex];
-    viewport.scrollTo({
-      left: target.offsetLeft - viewport.offsetLeft,
-      behavior: 'smooth'
-    });
-    updateDots();
-  }
-
-  function syncFromScroll() {
-    if (!isMobileRecognition()) return;
-    var scrollLeft = viewport.scrollLeft;
-    var closest = 0;
-    var smallest = Infinity;
-    cards.forEach(function (card, index) {
-      var left = card.offsetLeft - viewport.offsetLeft;
-      var diff = Math.abs(left - scrollLeft);
-      if (diff < smallest) {
-        smallest = diff;
-        closest = index;
-      }
-    });
-    currentIndex = closest;
-    updateDots();
-  }
-
-  viewport.addEventListener('scroll', syncFromScroll, { passive: true });
-  window.addEventListener('resize', function () {
-    buildDots();
-    if (isMobileRecognition()) goTo(currentIndex);
-  });
-
-  buildDots();
-  if (isMobileRecognition()) goTo(0);
-});
-</script>
-
- <script>
-        function showTab(tabId) {
-            // Hide all tab contents
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => {
-                content.classList.remove('active');
-            });
-
-            // Remove active class from all buttons
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            // Show selected tab
-            document.getElementById(tabId).classList.add('active');
-
-            // Add active class to clicked button
-            event.target.classList.add('active');
-        }
-    </script>
-
-  <script>
-        (function () {
-        const track = document.getElementById('carouselTrack');
-        const wrapper = document.getElementById('carouselWrapper');
-        const nextBtn = document.getElementById('nextBtn');
-
-        if (!track || !wrapper || !nextBtn) return;
-
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
-
-        if (!totalSlides) return;
-
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        wrapper.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-
-        wrapper.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        }, { passive: true });
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    nextSlide();
-                } else {
-                    prevSlide();
-                }
-            }
-        }
-
-        function updateCarousel() {
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
-            if (currentSlide === totalSlides - 1) {
-                nextBtn.disabled = true;
-            } else {
-                nextBtn.disabled = false;
-            }
-        }
-
-        function nextSlide() {
-            if (currentSlide < totalSlides - 1) {
-                currentSlide++;
-                updateCarousel();
-            }
-        }
-
-        function prevSlide() {
-            if (currentSlide > 0) {
-                currentSlide--;
-                updateCarousel();
-            }
-        }
-
-        updateCarousel();
-        })();
-    </script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const viewport = document.getElementById('featuresSlider');
-  const prevBtn = document.querySelector('.features-arrow.prev');
-  const nextBtn = document.querySelector('.features-arrow.next');
-  const dotsContainer = document.getElementById('featuresDots');
-
-  if (!viewport || !prevBtn || !nextBtn) return;
-
-  let currentIndex = 0;
-
-  function isMobileFeatures() {
-    return window.matchMedia('(max-width: 767px)').matches;
-  }
-
-  function getTargets() {
-    if (isMobileFeatures()) {
-      return Array.from(viewport.querySelectorAll('.feature-card'));
-    }
-    return Array.from(viewport.querySelectorAll('.features-slide'));
-  }
-
-  function buildDots(count) {
-    if (!dotsContainer) return;
-    dotsContainer.innerHTML = '';
-    if (!isMobileFeatures() || count <= 1) {
-      dotsContainer.hidden = true;
-      return;
-    }
-    dotsContainer.hidden = false;
-    for (var i = 0; i < count; i++) {
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'features-dot' + (i === currentIndex ? ' active' : '');
-      btn.setAttribute('aria-label', 'Feature ' + (i + 1));
-      btn.setAttribute('data-index', String(i));
-      btn.addEventListener('click', function () {
-        goToSlide(parseInt(this.getAttribute('data-index'), 10));
-      });
-      dotsContainer.appendChild(btn);
-    }
-  }
-
-  function updateDots() {
-    if (!dotsContainer) return;
-    var dots = dotsContainer.querySelectorAll('.features-dot');
-    dots.forEach(function (dot, i) {
-      dot.classList.toggle('active', i === currentIndex);
-    });
-  }
-
-  function goToSlide(index) {
-    var targets = getTargets();
-    if (!targets.length) return;
-
-    currentIndex = Math.max(0, Math.min(index, targets.length - 1));
-    var target = targets[currentIndex];
-
-    if (target) {
-      viewport.scrollTo({
-        left: target.offsetLeft - viewport.offsetLeft,
-        behavior: 'smooth'
-      });
-    }
-
-    updateArrows(targets.length);
-    updateDots();
-  }
-
-  function updateArrows(total) {
-    prevBtn.disabled = currentIndex <= 0;
-    nextBtn.disabled = currentIndex >= total - 1;
-  }
-
-  function syncIndexFromScroll() {
-    var targets = getTargets();
-    var scrollLeft = viewport.scrollLeft;
-    var closestIndex = 0;
-    var smallestDiff = Infinity;
-
-    targets.forEach(function (slide, index) {
-      var left = slide.offsetLeft - viewport.offsetLeft;
-      var diff = Math.abs(left - scrollLeft);
-      if (diff < smallestDiff) {
-        smallestDiff = diff;
-        closestIndex = index;
-      }
-    });
-
-    currentIndex = closestIndex;
-    updateArrows(targets.length);
-    updateDots();
-  }
-
-  function refresh() {
-    var targets = getTargets();
-    currentIndex = Math.min(currentIndex, Math.max(0, targets.length - 1));
-    buildDots(targets.length);
-    goToSlide(currentIndex);
-  }
-
-  prevBtn.addEventListener('click', function () {
-    goToSlide(currentIndex - 1);
-  });
-
-  nextBtn.addEventListener('click', function () {
-    goToSlide(currentIndex + 1);
-  });
-
-  viewport.addEventListener('scroll', syncIndexFromScroll, { passive: true });
-  window.addEventListener('resize', refresh);
-
-  refresh();
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const panel = document.getElementById('tuitionPanel');
-  const panelBg = document.getElementById('tuitionPanelBg');
-  const tabButtons = document.querySelectorAll('.tuition-tab');
-  const tabPanels = document.querySelectorAll('.tuition-tab-panel');
-
-  if (!panel || !tabButtons.length || !tabPanels.length) return;
-
-  function switchTuitionTab(tabName) {
-    const isFees = tabName === 'fees';
-
-    panel.classList.toggle('tuition-panel--fees', isFees);
-    panel.classList.toggle('tuition-panel--eligibility', !isFees);
-
-    if (panelBg) {
-      panelBg.src = isFees ? 'assets/tuition-fees-bg.png?v=2' : 'assets/tuition-eligibility-bg.png?v=2';
-    }
-
-    tabButtons.forEach(function (button) {
-      const isActive = button.getAttribute('data-tab') === tabName;
-      button.classList.toggle('active', isActive);
-      button.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-
-    tabPanels.forEach(function (tabPanel) {
-      const isActive = tabPanel.id === (isFees ? 'tuitionTabFees' : 'tuitionTabEligibility');
-      tabPanel.classList.toggle('active', isActive);
-      tabPanel.hidden = !isActive;
-    });
-  }
-
-  tabButtons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      switchTuitionTab(button.getAttribute('data-tab'));
-    });
-  });
-
-  switchTuitionTab('fees');
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const viewport = document.querySelector('.skills-carousel-viewport');
-  const track = document.getElementById('skillsCarouselTrack');
-  const dotsContainer = document.getElementById('skillsDots');
-
-  if (!viewport || !track || !dotsContainer) return;
-
-  const slides = Array.from(track.querySelectorAll('.skills-slide'));
-  const dots = dotsContainer.querySelectorAll('.skills-dot');
-  let currentIndex = 0;
-
-  function getSlideWidth() {
-    if (slides[0]) {
-      return slides[0].getBoundingClientRect().width;
-    }
-    return viewport.clientWidth;
-  }
-
-  function goToSlide(index) {
-    currentIndex = Math.max(0, Math.min(index, slides.length - 1));
-    const offset = currentIndex * getSlideWidth();
-    track.style.transform = 'translate3d(-' + offset + 'px, 0, 0)';
-
-    dots.forEach(function (dot, i) {
-      const isActive = i === currentIndex;
-      dot.classList.toggle('active', isActive);
-      dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-  }
-
-  dots.forEach(function (dot) {
-    dot.addEventListener('click', function () {
-      goToSlide(parseInt(dot.getAttribute('data-index'), 10));
-    });
-  });
-
-  window.addEventListener('resize', function () {
-    goToSlide(currentIndex);
-  });
-
-  goToSlide(0);
-});
-</script>
-
-<script>
-(function () {
-  var applyBtn = document.getElementById('heroApplyNowBtn');
-  var npfTrigger = document.querySelector('.hero-npf-trigger.npfWidget-86a9cceff1e5a85bf6f787455b7997df');
-  if (!applyBtn) return;
-
-  applyBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    if (npfTrigger) {
-      npfTrigger.click();
-      return;
-    }
-    var fallback = document.querySelector('.npfWidgetButton.npfWidget-86a9cceff1e5a85bf6f787455b7997df');
-    if (fallback) fallback.click();
-  });
-})();
-</script>
+<!-- JS: jQuery, Bootstrap 4, page interactions, NPF widgets -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js?v=202610281300"></script>
 
 <script type="text/javascript">var s=document.createElement("script"); s.type="text/javascript"; s.async=true; s.src="https://widgets.in8.nopaperforms.com/emwgts.js"; document.body.appendChild(s);</script>
 
 <script src="https://in8cdn.npfs.co/js/widget/npfwpopup.js"></script>
-<script>
-let npfW86a9cceff1e5a85bf6f787455b7997df = new NpfWidgetsInit({
-  widgetId: '86a9cceff1e5a85bf6f787455b7997df',
-  baseurl: 'widgets.in8.nopaperforms.com',
-  formTitle: 'Enquiry Form',
-  titleColor: '#FF0033',
-  backgroundColor: '#ddd',
-  iframeHeight: '500px',
-  buttonbgColor: '#4c79dc',
-  buttonTextColor: '#FFF'
-});
-</script>
+<script>let npfW86a9cceff1e5a85bf6f787455b7997df = new NpfWidgetsInit({'widgetId':'86a9cceff1e5a85bf6f787455b7997df','baseurl':'widgets.in8.nopaperforms.com','formTitle':'Enquiry Form','titleColor':'#FF0033','backgroundColor':'#ddd','iframeHeight':'500px','buttonbgColor':'#4c79dc','buttonTextColor':'#FFF'});</script>
 
+<footer class="site-footer">
+  <p class="text-center font-weight-bold">
+    &copy; 2026 O.P. Jindal Global University. All Rights Reserved
+  </p>
+</footer>
+
+<!-- NoPaperForms / NIAA Chatbot -->
 <div class="npf_chatbots" data-w="a8b32b8ab432456a971900791d70c15b" style="display:none;"></div>
 <script type="text/javascript">
   var s = document.createElement("script");
@@ -1776,12 +1442,5 @@ let npfW86a9cceff1e5a85bf6f787455b7997df = new NpfWidgetsInit({
   document.body.appendChild(s);
 </script>
 
- 
-<footer class="site-footer">
-  <p class="text-center fw-bold">
-    &copy; 2026 O.P. Jindal Global University. All Rights Reserved
-  </p>
-</footer>
 </body>
 </html>
-
